@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎓 Student Grade Management System</h1>
+        <p class="subtitle">Data Structures Project &mdash; Arrays Application</p>
+    </header>
+
+    <main>
+        <!-- Add Student Form -->
+        <section class="card">
+            <h2>Add Student</h2>
+            <div class="form-row">
+                <input type="text" id="nameInput" placeholder="Student name" />
+                <input type="number" id="gradeInput" placeholder="Grade (0-100)" min="0" max="100" />
+                <button onclick="addStudent()">Add Student</button>
+            </div>
+            <p id="message" class="message"></p>
+        </section>
+
+        <!-- Student List -->
+        <section class="card">
+            <div class="card-header">
+                <h2>All Students</h2>
+                <button class="danger" onclick="clearAll()">Clear All</button>
+            </div>
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Grade</th>
+                        <th>AI Grade</th>
+                        <th>AI Prediction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="studentBody">
+                    <tr><td colspan="6" class="empty">No students added yet.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Statistics -->
+        <section class="card">
+            <h2>Class Statistics</h2>
+            <div class="stats" id="stats">
+                <div class="stat"><span class="label">Total</span><span class="value" id="statTotal">0</span></div>
+                <div class="stat"><span class="label">Average</span><span class="value" id="statAvg">0</span></div>
+                <div class="stat"><span class="label">Highest</span><span class="value" id="statHigh">0</span></div>
+                <div class="stat"><span class="label">Lowest</span><span class="value" id="statLow">0</span></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with HTML, CSS &amp; JavaScript &mdash; arrays in action.</p>
+        <p><a href="https://github.com/Josephkatakyie/student-grade-system">View source on GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
